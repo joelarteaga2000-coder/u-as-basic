@@ -1,141 +1,262 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demo Web para Estudio de Uñas | DiSo Web Studio</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soft Luxe Nails — Studio Premium</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@200;300;400&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <img src="logo.png" class="nav-logo" alt="Logo del estudio de uñas">
 
-            <button class="menu-toggle" aria-label="Abrir menú de navegación">
-                ☰
-            </button>
+  <div id="cur-dot"></div>
+  <div id="cur-ring"></div>
 
-            <ul class="nav-links">
-                <li><a href="#sobre">Nosotras</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#galeria">Galería</a></li>
-                <li><a href="#ubicacion">Ubicación</a></li>
-            </ul>
-        </nav>
-    </header>
+  <a href="https://wa.me/525500000000" class="wa-btn" id="waBtn" target="_blank" aria-label="WhatsApp">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span>Reservar</span>
+  </a>
 
-    <main>
-        <section id="hero">
-            <div class="hero-content">
-                <img src="logo.png" class="hero-logo" alt="Logo del estudio de uñas">
-                <p class="hero-subtitle">Diseños elegantes, cuidado profesional y resultados que amarás.</p>
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">Soft Luxe<em>Nails</em></a>
+      <div class="nav-links">
+        <a href="#tecnicas" class="nl">Técnicas</a>
+        <a href="#galeria" class="nl">Galería</a>
+        <a href="#precios" class="nl">Precios</a>
+        <a href="#reservar" class="nl nl-rose">Reservar</a>
+      </div>
+      <button class="burger" id="burger"><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="mob-menu" id="mobMenu">
+    <a href="#tecnicas" class="mml">Técnicas</a>
+    <a href="#galeria" class="mml">Galería</a>
+    <a href="#precios" class="mml">Precios</a>
+    <a href="#reservar" class="mml">Reservar</a>
+  </div>
 
-                <p style="max-width: 680px; margin: 0 auto 22px auto; color: rgba(255,255,255,0.88); font-size: 14px; line-height: 1.7;">
-                    Este sitio es un ejemplo de diseño web para estudios de uñas.
-                </p>
+  <main>
 
-                <a href="https://wa.me/5215525051050?text=Hola,%20quiero%20una%20p%C3%A1gina%20web%20como%20este%20demo%20de%20u%C3%B1as%20para%20mi%20negocio" class="whatsapp-btn hero-btn" target="_blank" rel="noopener noreferrer">
-                    Quiero una página como esta
-                </a>
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="hero-inner">
+        <div class="hero-left">
+          <div class="hero-eyebrow fade-el" style="--d:.3s">✦ Nail Studio · Polanco CDMX</div>
+          <h1 class="hero-title fade-el" style="--d:.6s">
+            El arte en<br>tus <em>manos.</em>
+          </h1>
+          <p class="hero-desc fade-el" style="--d:1s">Un ritual de cuidado y belleza. Cada uña, una obra de arte creada con amor, precisión y los mejores materiales.</p>
+          <a href="#reservar" class="btn-rose fade-el" style="--d:1.3s">Reservar mi lugar</a>
+        </div>
+        <div class="hero-right fade-el" style="--d:.4s">
+          <div class="hero-bento-mini">
+            <div class="hbm-main breathe">
+              <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=700&q=85&auto=format&fit=crop" alt="Nails" class="hbm-img">
+              <div class="hbm-label">Gelish Premium</div>
             </div>
-        </section>
-
-        <section id="sobre" class="reveal">
-            <h2>Sobre el estudio</h2>
-            <p class="about-text">
-                En Studio Nails nos enfocamos en resaltar tu estilo con servicios de manicure y diseño de uñas
-                realizados con cuidado, detalle y productos de calidad. Nuestro objetivo es que cada cita
-                sea una experiencia cómoda, estética y personalizada.
-            </p>
-        </section>
-
-        <section id="servicios" class="reveal">
-            <h2>Nuestros servicios</h2>
-
-            <div class="services-container">
-                <div class="service-card">
-                    <div class="service-icon">💅</div>
-                    <h3>Gel semipermanente</h3>
-                    <p>Acabado limpio, elegante y de larga duración para tu día a día.</p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">✨</div>
-                    <h3>Uñas acrílicas</h3>
-                    <p>Diseño, estructura y estilo personalizado con acabado profesional.</p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">🎨</div>
-                    <h3>Nail art</h3>
-                    <p>Diseños creativos y detalles únicos para un look más especial.</p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">👣</div>
-                    <h3>Manicure & pedicure</h3>
-                    <p>Cuidado completo para manos y pies con acabado fresco y prolijo.</p>
-                </div>
+            <div class="hbm-side">
+              <div class="hbm-sm breathe" style="animation-delay:.5s">
+                <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=400&q=70&auto=format&fit=crop&crop=right" alt="Nails" class="hbm-img">
+              </div>
+              <div class="hbm-pill breathe" style="animation-delay:1s">
+                <span class="hp-n">4.9★</span>
+                <span class="hp-l">Rating</span>
+              </div>
+              <div class="hbm-sm breathe" style="animation-delay:1.5s">
+                <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=400&q=70&auto=format&fit=crop&crop=left" alt="Nails" class="hbm-img">
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </div>
+      <!-- Decorative circles -->
+      <div class="hero-deco d1"></div>
+      <div class="hero-deco d2"></div>
+    </section>
 
-        <section id="galeria" class="reveal">
-            <h2>Galería</h2>
+    <!-- MARQUEE -->
+    <div class="marquee-bar">
+      <div class="mt" id="mt">
+        <span>Gelish</span><span class="mk">✦</span><span>Acrílico</span><span class="mk">✦</span><span>Spa de Manos</span><span class="mk">✦</span><span>Nail Art</span><span class="mk">✦</span><span>Semipermanente</span><span class="mk">✦</span><span>Builder Gel</span><span class="mk">✦</span>
+        <span>Gelish</span><span class="mk">✦</span><span>Acrílico</span><span class="mk">✦</span><span>Spa de Manos</span><span class="mk">✦</span><span>Nail Art</span><span class="mk">✦</span><span>Semipermanente</span><span class="mk">✦</span><span>Builder Gel</span><span class="mk">✦</span>
+      </div>
+    </div>
 
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="image1.jpg" alt="Diseño de uñas" loading="lazy">
-                </div>
+    <!-- TÉCNICAS BENTO -->
+    <section class="tec-sec" id="tecnicas">
+      <div class="sec-wrap">
+        <div class="sec-head reveal">
+          <div class="eyebrow">Nuestras técnicas</div>
+          <h2 class="sec-title">Rituales de<br><em>belleza</em></h2>
+        </div>
+        <div class="tec-bento">
 
-                <div class="gallery-item">
-                    <img src="image2.jpg" alt="Servicio de manicure" loading="lazy">
-                </div>
-
-                <div class="gallery-item">
-                    <img src="image1.jpg" alt="Aplicación de uñas" loading="lazy">
-                </div>
-
-                <div class="gallery-item">
-                    <img src="image2.jpg" alt="Uñas terminadas" loading="lazy">
-                </div>
+          <div class="tb tb-hero breathe reveal">
+            <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=900&q=85&auto=format&fit=crop" alt="Gelish" class="tb-img">
+            <div class="tb-body">
+              <div class="tb-tag">01</div>
+              <h3 class="tb-name">Gelish<br><em>Premium</em></h3>
+              <p class="tb-desc">Acabado brillante de larga duración. Hasta 4 semanas perfectas sin astillado.</p>
+              <div class="tb-price">Desde $380</div>
             </div>
-        </section>
+          </div>
 
-        <section id="ubicacion" class="reveal">
-            <h2>Ubicación</h2>
-            <p>Av. Reforma 123, Ciudad de México</p>
-            <p>Lunes a Sábado · 10:00 AM – 7:00 PM</p>
+          <div class="tb breathe reveal" style="animation-delay:.3s;--rd:.08s">
+            <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&q=80&auto=format&fit=crop&crop=right" alt="Acrílico" class="tb-img">
+            <div class="tb-body tb-body-sm">
+              <div class="tb-tag">02</div>
+              <h3 class="tb-name-sm">Acrílico<br><em>Esculpido</em></h3>
+              <div class="tb-price-sm">Desde $450</div>
+            </div>
+          </div>
 
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.123456789!2d-99.1677!3d19.4326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f8b123456789%3A0x123456789abcdef!2sMexico%20City!5e0!3m2!1ses!2smx!4v0000000000000"
-                width="100%"
-                height="300"
-                style="border: 0; border-radius: 10px;"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-        </section>
+          <div class="tb tb-plain breathe reveal" style="animation-delay:.5s;--rd:.12s">
+            <div class="tb-plain-inner">
+              <div class="tp-icon">✿</div>
+              <div class="tb-tag">03</div>
+              <h3 class="tb-name-sm">Spa de<br><em>Manos</em></h3>
+              <p class="tb-desc-sm">Exfoliación, masaje y nutrición profunda. Un ritual completo para tus manos.</p>
+              <div class="tb-price-sm">Desde $280</div>
+            </div>
+          </div>
 
-        <section id="final-cta" class="reveal">
-            <h2>¿Quieres una página así para tu negocio?</h2>
-            <p>Te ayudamos a tener una web profesional, moderna y optimizada para WhatsApp.</p>
-            <a href="https://wa.me/5215525051050?text=Hola,%20quiero%20una%20p%C3%A1gina%20web%20como%20este%20demo%20de%20u%C3%B1as%20para%20mi%20negocio" class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
-                Solicitar página
-            </a>
-        </section>
-    </main>
+          <div class="tb breathe reveal" style="animation-delay:.4s;--rd:.1s">
+            <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&q=80&auto=format&fit=crop&crop=center" alt="Nail Art" class="tb-img">
+            <div class="tb-body tb-body-sm">
+              <div class="tb-tag">04</div>
+              <h3 class="tb-name-sm">Nail Art<br><em>Personalizado</em></h3>
+              <div class="tb-price-sm">Desde $500</div>
+            </div>
+          </div>
 
-    <footer>
-        <p>&copy; 2026 Demo de diseño web para estudio de uñas · DiSo Web Studio</p>
-    </footer>
+          <div class="tb tb-stat breathe reveal" style="animation-delay:.6s;--rd:.15s">
+            <div class="tb-stat-n">2K+</div>
+            <div class="tb-stat-l">Clientas felices<br>este año</div>
+          </div>
 
-    <a href="https://wa.me/5215525051050?text=Hola,%20quiero%20una%20p%C3%A1gina%20web%20como%20este%20demo%20de%20u%C3%B1as%20para%20mi%20negocio" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Abrir WhatsApp">
-        💬
-    </a>
+          <div class="tb tb-wide breathe reveal" style="animation-delay:.2s;--rd:.18s">
+            <div class="tb-wide-in">
+              <div class="tp-icon" style="font-size:32px;margin-bottom:0">♡</div>
+              <div>
+                <div class="tb-tag">05</div>
+                <h3 class="tb-name-sm">Builder<br><em>Gel</em></h3>
+                <p class="tb-desc-sm">Resistencia y flexibilidad. Para uñas largas y duraderas de aspecto natural.</p>
+              </div>
+              <div class="tb-price-sm">Desde $420</div>
+            </div>
+          </div>
 
-    <script src="script.js"></script>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERÍA CIRCULAR -->
+    <section class="gal-sec" id="galeria">
+      <div class="sec-wrap">
+        <div class="sec-head reveal">
+          <div class="eyebrow">Nuestra galería</div>
+          <h2 class="sec-title">Cada uña,<br><em>una obra</em></h2>
+        </div>
+        <div class="gal-grid">
+          <div class="gg-item reveal">
+            <div class="gg-circle breathe"><img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=500&q=80" alt="" class="gg-img"></div>
+            <div class="gg-label">French Moderno</div>
+          </div>
+          <div class="gg-item reveal" style="--rd:.1s">
+            <div class="gg-circle breathe" style="animation-delay:.5s"><img src="https://images.unsplash.com/photo-1604655855765-d4eae6cca6be?w=500&q=80" alt="" class="gg-img"></div>
+            <div class="gg-label">Nude Luxury</div>
+          </div>
+          <div class="gg-item reveal" style="--rd:.2s">
+            <div class="gg-circle breathe" style="animation-delay:1s"><img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=500&q=80&crop=bottom" alt="" class="gg-img"></div>
+            <div class="gg-label">Pastel Dreams</div>
+          </div>
+          <div class="gg-item reveal" style="--rd:.3s">
+            <div class="gg-circle breathe" style="animation-delay:1.5s"><img src="https://images.unsplash.com/photo-1604655855765-d4eae6cca6be?w=500&q=80&crop=top" alt="" class="gg-img"></div>
+            <div class="gg-label">Glitter Touch</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRECIOS -->
+    <section class="precio-sec" id="precios">
+      <div class="sec-wrap">
+        <div class="sec-head reveal"><div class="eyebrow">Inversión en ti</div><h2 class="sec-title">Precios</h2></div>
+        <div class="precio-grid">
+          <div class="pc-card breathe reveal">
+            <div class="pc-name">Gelish Premium</div>
+            <div class="pc-desc">Color sólido · Duración 3-4 semanas</div>
+            <div class="pc-price">$380</div>
+          </div>
+          <div class="pc-card breathe reveal" style="animation-delay:.2s;--rd:.08s">
+            <div class="pc-name">Acrílico Esculpido</div>
+            <div class="pc-desc">Molde + color · Longitud a elegir</div>
+            <div class="pc-price">$450</div>
+          </div>
+          <div class="pc-card breathe reveal" style="animation-delay:.4s;--rd:.14s">
+            <div class="pc-name">Builder Gel</div>
+            <div class="pc-desc">Natural y resistente · Aspecto seda</div>
+            <div class="pc-price">$420</div>
+          </div>
+          <div class="pc-card breathe reveal" style="animation-delay:.6s;--rd:.2s">
+            <div class="pc-name">Nail Art + Diseño</div>
+            <div class="pc-desc">Por uña desde $50 · Paquete completo</div>
+            <div class="pc-price">desde $500</div>
+          </div>
+          <div class="pc-card breathe reveal" style="animation-delay:.1s;--rd:.1s">
+            <div class="pc-name">Spa de Manos</div>
+            <div class="pc-desc">Exfoliación + masaje + nutrición</div>
+            <div class="pc-price">$280</div>
+          </div>
+          <div class="pc-card pc-card-rose breathe reveal" style="animation-delay:.3s;--rd:.16s">
+            <div class="pc-name">Experiencia Completa</div>
+            <div class="pc-desc">Gelish + Spa + Diseño · La experiencia total</div>
+            <div class="pc-price">$750</div>
+            <div class="pc-badge">⭐ Más pedido</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESERVAR -->
+    <section class="res-sec" id="reservar">
+      <div class="res-inner">
+        <div class="res-left reveal">
+          <div class="eyebrow">Agenda tu cita</div>
+          <h2 class="res-title">Tu momento<br>de <em>mimos.</em></h2>
+          <p class="res-desc">Te esperamos en nuestro estudio en Polanco. Respuesta en menos de 1 hora.</p>
+          <div class="res-info">
+            <div class="ri"><span class="ri-l">Ubicación</span><span class="ri-v">Masaryk 123, Polanco</span></div>
+            <div class="ri"><span class="ri-l">Horario</span><span class="ri-v">Lun – Sáb · 9:00 – 20:00</span></div>
+            <div class="ri"><span class="ri-l">WhatsApp</span><span class="ri-v">+52 55 0000 0000</span></div>
+          </div>
+        </div>
+        <div class="res-right reveal" style="--rd:.15s">
+          <div class="res-form-wrap">
+            <div class="rfw-title">Solicitar cita</div>
+            <form id="resForm">
+              <div class="fg-row"><div class="fg"><label>Nombre</label><input type="text" placeholder="Tu nombre"></div><div class="fg"><label>Teléfono</label><input type="tel" placeholder="+52 55 0000 0000"></div></div>
+              <div class="fg"><label>Servicio</label>
+                <select><option value="">Elige tu servicio ✿</option><option>Gelish Premium · $380</option><option>Acrílico Esculpido · $450</option><option>Builder Gel · $420</option><option>Nail Art · desde $500</option><option>Spa de Manos · $280</option><option>Experiencia Completa · $750</option></select>
+              </div>
+              <div class="fg"><label>Fecha preferida</label><input type="date"></div>
+              <button type="submit" class="btn-rose btn-rose-full">Confirmar mi cita ✦</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="fi"><div class="footer-logo">Soft Luxe <em>Nails</em></div><div class="flinks"><a href="#tecnicas">Técnicas</a><a href="#galeria">Galería</a><a href="#precios">Precios</a></div><div class="fc">© 2026 Soft Luxe Nails · Studio Premium · Polanco CDMX</div></div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
